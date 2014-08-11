@@ -1,13 +1,13 @@
-TermTV Jenkins Plugin
-=====================
+TermTV Plugin for Jenkins
+-------------------------
 
-This plugin integrates the [TermTV][1] terminal recording viewer with the [Jenkins CI server][5].
+This plugin integrates the TermTV terminal recording viewer with the [Jenkins continuous integration server][5].
 
-TermTV is a JavaScript-based viewer for [ttyrec][4] and [termrec][6] files. More information is available at the TermTV wiki: [http://www.fact-project.org/termtv/][1]
+TermTV is a JavaScript-based viewer for [ttyrec][4] and [termrec][6] files. More information is available at the TermTV homepage: [http://www.fact-project.org/termtv/][1]
 
 Once this plugin is installed, enabling the TermTV checkbox in a project's configuration will add a "TermTV" link to each of the project's build pages (in the left column).
 
-The link leads to the TermTV viewer, which upon loading will attempt to begin playback of the terminal recording file found in your workspace.
+The link leads to the TermTV viewer, which upon loading will attempt to load and begin playback of the terminal recording file found in your workspace.
 
 By default, the recording file is expected to be named "ttyrecord" (the default output filename used by ttyrec); if you want to use a different name, the file name is customizable in the project configuration.
 
@@ -16,11 +16,11 @@ Usage Example
 Here's a scenario where TermTV might be useful in a project:
 
 - Let's say your Jenkins project runs tests involving an ncurses-based program (such as tmux), and you wish to see what the live terminal output would've looked like when originally displayed (rather than only examining the raw Jenkins output log for the build).
-- To accomplish that, in your project configuration, enable the TermTV checkbox, and leave the default artifact filename ("ttyrecord") in place.
+- In your project configuration, enable the TermTV plugin, and leave the default artifact filename ("ttyrecord") in place.
 - Make sure your project leaves a terminal recording file named "ttyrecord" in the workspace when it runs - for example, you might launch an Expect (or Python pexpect!) script that runs the [ttyrec][4] program before any other commands.
-  - NOTE: Jenkins shell script build steps that simply contain the command "ttyrec" at the top will not produce a complete recording, since Jenkins' shell scripts run in non-interactive mode by default. A separate shell must be launched by the build step to handle that issue.
-- Once a build completes, click the link for the build in Jenkins, then click that build's "TermTV" link. That should display the viewer and begin playback of the ttyrecord file.
-- If you wish to load the recording in a command-line player (such as ttyplay or [IPBT][7]) for finer control over playback, you can simply use the artifact download link at the top of the build's TermTV page to download the recording.
+  - NOTE: Jenkins shell script build steps that simply contain the command "ttyrec" at the top will not produce a complete recording, since Jenkins' shell scripts run in non-interactive mode by default.
+- Once a build completes, click the link for the build in Jenkins, then click "TermTV" - this should display the viewer and begin playback of the ttyrecord file.
+- If you wish to use a command-line player (such as ttyplay or [IPBT][7]) for finer control over playback, you can simply use the artifact download link at the top of the build's TermTV page to download the recording.
 
 Contributors
 ------------
