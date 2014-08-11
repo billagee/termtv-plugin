@@ -1,5 +1,6 @@
 #!/bin/bash
 
 cd termtv
-mvn hpi:run
+mvn clean
+mvn package
 
