@@ -2,5 +2,5 @@
   This view is used to render the installed plugins page.
 -->
 <div>
-  This plugin adds <a target="_blank" href="http://www.fact-project.org/termtv/">TermTV</a> support to Jenkins, which enables in-browser playback of terminal recording artifacts produced by projects.
+  This plugin adds <a target="_blank" href="http://www.fact-project.org/termtv/">TermTV</a> support to Jenkins. It enables in-browser playback of terminal recording artifacts produced by projects.
 </div>
