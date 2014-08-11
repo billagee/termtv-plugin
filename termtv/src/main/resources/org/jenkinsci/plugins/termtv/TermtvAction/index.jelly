@@ -1,0 +1,59 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
+	<j:set var="build" value="${it.build}" />
+	<l:layout title="${build} Ttyrecord" norefresh="false">
+		<st:include it="${build}" page="sidepanel.jelly" />
+		<l:main-panel>
+			<h1>${build} Terminal Recording</h1>
+			<j:choose>
+				<j:when test="${it.ttyrecordFileExists()}">
+                <h2>Artifact filename: <a href="${it.ttyrecordPath}">${it.ttyrecordPath}</a></h2>
+			<link rel="stylesheet" type="text/css" href="${resURL}/plugin/termtv/termtv/termtv.css" />
+			<script src="${resURL}/plugin/termtv/termtv/js/aes.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/clone.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/parser.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/emulator.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/decoder.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/font.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/canvas.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/player.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/display.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/js/overlay.js"></script>
+			<script src="${resURL}/plugin/termtv/termtv/termtv.js"></script>
+			<div id="frame"></div>
+			<script>
+			var options =
+			{
+				//'name':     "../../../../../..${resURL}/plugin/termtv/termtv/index.rec",
+				// Example path: 'name': "../artifact/ttyrecordings/ttyrecord",
+				'name':     "../${it.ttyrecordPath}",
+				//'font':     "../../../../../..${resURL}/plugin/termtv/termtv/fonts/inconsolata",
+				'font':     "../../../../../..${resURL}/plugin/termtv/termtv/fonts/fixed-8x13",
+				'boldfont': "../../../../../..${resURL}/plugin/termtv/termtv/fonts/fixed-8x13B",
+				//'autostart': 0,
+				'autostart': 1000,
+				//'controls': 9,
+				'controls': true,
+				'fontsize': 13,
+				'noskip': false,
+				//'scan': false,
+				//'scan': 0,
+				// TODO: Try wiring a control to TTVPlayer.setWarpFactor() to adjust
+				// playback speed (preferably both when stream is AND isn't being played)
+				//   http://www.fact-project.org/termtv/doc/symbols/TTVPlayer.html
+				'warp': 0.5,
+				//'debug': 2,
+			};
+
+			var frame = document.getElementById("frame");
+			var display = new TTVDisplay(options);
+			frame.appendChild(display);
+			</script>
+
+                </j:when>
+				<j:otherwise>No artifact file with the name "${it.ttyrecFilename}" was found. Does it exist in the workspace?</j:otherwise>
+			</j:choose>
+
+		</l:main-panel>
+	</l:layout>
+</j:jelly>
+

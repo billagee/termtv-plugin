@@ -1,0 +1,204 @@
+table#table.tty
+{
+    border-top-color:    #DDD;
+    border-left-color:   #BBB;
+    border-right-color:  #BBB;
+    border-bottom-color: #999;
+
+    border-style: solid;
+
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+
+    border-radius:   4px;
+    border-spacing:  0;
+    border-collapse: initial;
+
+}
+
+tr#row1.tty
+{
+    background-image: linear-gradient(white 0%, #BFA0C2 100%);
+}
+
+td#cell11.tty
+{
+    padding:2px 0 0 2px;
+    border: 0px;
+}
+
+td#cell12.tty
+{
+    color:       gray;
+    font-weight: bold; 
+    font-family: monospace;
+    border: 0px;
+}
+
+td#cell13.tty
+{
+    padding: 3px 3px 0 0;
+    text-align: right;
+    border: 0px;
+}
+
+td#cell21.tty
+{
+    padding:5px 5px 5px 5px;
+    border-color:white;
+    text-align:center;
+}
+
+canvas#canvas.tty
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+img#img11.tty
+{
+    content: url(img/window-icon.png);
+    width:   17px;
+    height:  17px;
+}
+
+img#img13.tty
+{
+    content: url(img/close.png);
+    width:   18px;
+    height:  18px;
+}
+
+tr#row2.tty
+{
+    background-color: black;
+}
+
+tr#row3.tty
+{
+    padding: 0px;
+}
+
+#row3 td.tty
+{
+    background-image: linear-gradient(white 0%, #AAB2B0 100%);
+    padding: 0px;
+    border: 0px;
+}
+
+td#cell31.tty
+{
+    color:        #909090;
+    padding-left: 9px;
+    font-size:    90%:
+    font-weight:  bold;
+}
+
+td#cell32.tty
+{
+    text-align: center;
+}
+
+td.tty, span.tty
+{
+    vertical-align: middle;
+}
+
+span#input321.tty
+{
+    content: url(img/rewind.png);
+}
+
+span#input322a.tty
+{
+    content: url(img/play.png);
+}
+
+span#input322b.tty
+{
+    content: url(img/pause.png);
+}
+
+span#input326.tty
+{
+    content: url(img/bookmark.png);
+}
+
+span#input327a.tty
+{
+    content: url(img/jump-inactive.png);
+}
+
+span#input327b.tty
+{
+    content: url(img/jump-active.png);
+}
+
+span#input33.tty
+{
+    content: url(img/screenshot.png);
+}
+
+#cell32 span.tty
+{
+    width:  28px;
+    height: 28px;
+}
+
+span#input33.tty
+{
+    width:  24px;
+    height: 24px;
+}
+
+span.tty
+{
+    color:       navy;
+    font-size:   90%;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+span#span323.tty
+{
+    padding-right: 5px;
+    padding-left:  10px;
+}
+span#span325.tty
+{
+    padding-right: 10px;
+    padding-left:  5px;
+}
+
+div#div4.tty
+{
+    border-top:  1px solid white;
+    white-space: nowrap;
+    height:      20em;
+    /*    max-width:        100% !important;/*auto !important;*/
+    overflow:    auto;
+    color:       white;
+    font-weight: bold;
+    font-size:   60%;
+    font-family: sans;
+}
+
+td#cell33.tty
+{
+    background-image: linear-gradient(white 0%, #B0B0C0 100%);
+    padding-top:      1px;
+    padding-right:    7px;
+    text-align:       right;
+}
+
+@font-face {
+   font-family: 'c64';
+   font-weight: normal;
+   font-style:  normal;
+   src: url( fonts/C64_Pro_Mono_v1.0-STYLE.woff ),
+	url( fonts/C64_Pro_Mono_v1.0-STYLE.eot  ),
+        url( fonts/C64_Pro_Mono_v1.0-STYLE.ttf  );
+}

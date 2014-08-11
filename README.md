@@ -25,6 +25,7 @@ Here's a scenario where TermTV might be useful in a project:
 Contributors
 ------------
 1. [Bill Agee][2]
+2. Portions of code from the Jenkins [Live Screenshot plugin][8]
 
 [1]: http://www.fact-project.org/termtv/
 [2]: https://github.com/billagee
@@ -32,6 +33,7 @@ Contributors
 [5]: http://jenkins-ci.org/
 [6]: http://angband.pl/termrec.html
 [7]: http://www.chiark.greenend.org.uk/~sgtatham/ipbt/
+[8]: https://github.com/jenkinsci/livescreenshot-plugin
 
 Screenshot
 ----------
